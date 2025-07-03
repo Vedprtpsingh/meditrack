@@ -1,0 +1,315 @@
+/* ===== Root Variables ===== */
+:root {
+  --primary-color: #3498db;
+  --primary-hover: #2980b9;
+  --success-color: #27ae60;
+  --success-hover: #1e8449;
+  --admin-color: #8e44ad;
+  --admin-hover: #732d91;
+  --dark: #333;
+  --light: #f9f9f9;
+  --white: #fff;
+  --text: #333;
+  --border: #ccc;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== General Styles ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light);
+  color: var(--text);
+}
+
+h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin: 20px 0;
+}
+
+section {
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+/* ===== Header & Navigation ===== */
+header {
+  background: var(--dark);
+  color: var(--white);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ===== Forms ===== */
+form,
+.auth-form,
+.reminder-form,
+.doctor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+select,
+button {
+  padding: 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--dark);
+  color: var(--white);
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #111;
+}
+
+/* ===== Auth Section ===== */
+.auth-section {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+.auth-form button {
+  background-color: var(--primary-color);
+}
+
+.auth-form button:hover {
+  background-color: var(--primary-hover);
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none;
+}
+
+/* ===== Reminder Section ===== */
+.reminders-section {
+  max-width: 600px;
+}
+
+.reminder-form {
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.reminder-form label {
+  flex: 1 1 100%;
+  font-weight: bold;
+}
+
+.reminder-form input,
+.reminder-form select {
+  flex: 1 1 45%;
+}
+
+.reminder-form button {
+  flex: 1 1 100%;
+  background-color: var(--success-color);
+}
+
+.reminder-form button:hover {
+  background-color: var(--success-hover);
+}
+
+.reminder-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reminder-list th,
+.reminder-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.reminder-list th {
+  background-color: #f2f2f2;
+}
+
+/* ===== Doctors Section ===== */
+.doctors-section {
+  max-width: 800px;
+}
+
+#doctors-section input[type="text"],
+#doctors-section input[type="search"] {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+}
+
+.doctor-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.doctor-card {
+  background: #ecf0f1;
+  padding: 20px;
+  border-radius: 8px;
+  width: calc(50% - 20px);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h3 {
+  margin-top: 0;
+}
+
+.doctor-card button {
+  margin-top: 10px;
+  background-color: var(--primary-color);
+}
+
+.doctor-card button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* ===== Admin Section ===== */
+.admin-section {
+  max-width: 900px;
+}
+
+.doctor-form {
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.doctor-form label {
+  flex: 1 1 100%;
+  font-weight: bold;
+}
+
+.doctor-form input {
+  flex: 1 1 45%;
+}
+
+.doctor-form button {
+  flex: 1 1 100%;
+  background-color: var(--admin-color);
+}
+
+.doctor-form button:hover {
+  background-color: var(--admin-hover);
+}
+
+.admin-doctor-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-doctor-list th,
+.admin-doctor-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-doctor-list th {
+  background-color: #f2f2f2;
+}
+
+.admin-doctor-list button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+}
+
+.admin-doctor-list button:hover {
+  background-color: var(--primary-hover);
+}
+
+#admin-doctor-list .doctor-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Cards ===== */
+.reminder-card,
+.doctor-card {
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: var(--dark);
+  color: var(--white);
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .doctor-card {
+    width: 100%;
+  }
+
+  .reminder-form input,
+  .reminder-form select,
+  .doctor-form input {
+    flex: 1 1 100%;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
